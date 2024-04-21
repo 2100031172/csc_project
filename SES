@@ -1,0 +1,39 @@
+Let's take a look at the Event Email Notification System. These notifications act as helpful reminders, ensuring you stay on top of your schedule by sending timely emails about upcoming events. Whether it's a crucial meeting, a social gathering, or a special occasion, the event mail notification system keeps you informed and organized, sparing you the worry of forgetting important dates. With customizable templates and automated scheduling, these notifications can be tailored to suit your preferences, making the entire process seamless and efficient. By leveraging technology to deliver these reminders directly to your inbox, event mail notifications empower you to manage your time effectively and prioritize your commitments without missing a beat.
+
+1. Set up Amazon Simple Email Service (SES):
+  Go to the AWS Management Console and navigate to the SES dashboard.
+  Follow the prompts to verify your email address or domain to enable sending emails.
+  Configure email sending settings, such as DKIM authentication and email feedback forwarding.
+
+2. Create an S3 Bucket for Storing Templates:
+  Go to the S3 dashboard in the AWS Management Console.
+  Create a new bucket to store email templates and assets.
+  Upload HTML email templates and any images or assets required for your emails to the bucket.
+
+3. Set up Amazon Simple Notification Service (SNS):
+  Navigate to the SNS dashboard in the AWS Management Console.
+  Create a new topic for event notifications.
+  Subscribe to the topic using your verified email address to receive notifications.
+
+4. Create AWS Lambda Functions for Event Triggers:
+  Go to the Lambda dashboard in the AWS Management Console.
+  Create Lambda functions to handle various event triggers, such as RSVP confirmations or event reminders.
+  Configure triggers for the Lambda functions, such as S3 events or SNS notifications.
+
+5. Configure Event Sources:
+  Set up event sources to trigger the Lambda functions. For example:
+   Configure S3 bucket notifications to trigger Lambda functions when new template files are uploaded.
+   Publish messages to the SNS topic to trigger Lambda functions for sending event notifications.
+
+6. Develop Lambda Function Logic:
+  Write the code for Lambda functions to process event triggers and send email notifications.
+  Utilize AWS SDKs or libraries to interact with SES for sending emails.
+  Retrieve email templates from the S3 bucket and populate them with dynamic data as needed.
+
+7. Test the System:
+  Test the end-to-end functionality of the event mail notification system.
+  Verify that emails are sent correctly and contain the expected content.
+  Ensure that event triggers are properly handled by the Lambda functions.
+
+Check the You tube Video too
+https://lnkd.in/gmAvH5RN
